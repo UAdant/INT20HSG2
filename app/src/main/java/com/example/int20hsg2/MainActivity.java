@@ -12,15 +12,13 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.int20hsg2.R;
-
 import java.util.ArrayList;
 import java.util.List;
-//sdgss
+
 public class MainActivity extends AppCompatActivity {
 
     private Spinner spinnerDeviceType, spinnerManufacturer, spinnerModel;
-    private Button btnNext;
+    private Button btnNext, btnSearch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         spinnerManufacturer = findViewById(R.id.spinnerManufacturer);
         spinnerModel = findViewById(R.id.spinnerModel);
         btnNext = findViewById(R.id.btnNext);
+        btnSearch = findViewById(R.id.btnsearch);
 
         // Наповнюємо спіннери даними
         populateDeviceTypeSpinner();
@@ -46,6 +45,16 @@ public class MainActivity extends AppCompatActivity {
 
                 // Симулюємо завантаження даних з бази даних
                 loadDataFromDatabase();
+            }
+        });
+
+        // Обробка натискання на кнопку "Пошук"
+        btnSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Перехід на екран DeviceIsNotFound2
+                Intent intent = new Intent(MainActivity.this, device_is_not_found2.class);
+                startActivity(intent);
             }
         });
     }
@@ -86,15 +95,13 @@ public class MainActivity extends AppCompatActivity {
         spinnerModel.setAdapter(adapter);
     }
 
-
-
     private void showLoadingScreen() {
         // Показати загрузочний екран
         setContentView(R.layout.loading_screen);
     }
 
     private void loadDataFromDatabase() {
-        // Симуляція завантаження даних з бази даних
+        // Симулюємо завантаження даних з бази даних
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {

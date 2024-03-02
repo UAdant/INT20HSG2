@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DeviceIsNotFound">
+    tools:context=".device_is_not_found2">
 
     <EditText
         android:id="@+id/deviceisnotfound"
@@ -40,5 +40,4 @@
         android:contentDescription="Send Request"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/deviceisnotfound" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
