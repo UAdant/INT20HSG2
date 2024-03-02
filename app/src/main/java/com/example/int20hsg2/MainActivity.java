@@ -16,7 +16,7 @@ import com.example.int20hsg2.R;
 
 import java.util.ArrayList;
 import java.util.List;
-
+//sdgss
 public class MainActivity extends AppCompatActivity {
 
     private Spinner spinnerDeviceType, spinnerManufacturer, spinnerModel;
