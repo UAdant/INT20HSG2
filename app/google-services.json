@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "111051905583",
+    "project_id": "int20hsg",
+    "storage_bucket": "int20hsg.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:111051905583:android:e0b213e92ff8add4c344da",
+        "android_client_info": {
+          "package_name": "com.example.int20hsg2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1tkfmpwqlUa7zfRTjGtNP9sAGcDr4AQg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
