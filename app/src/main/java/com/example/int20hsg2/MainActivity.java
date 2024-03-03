@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
         for (String[] row : data) {
             db.execSQL(insertQuery, row);
         }
-        //
+        //fgd
         db.close();
     }
 
