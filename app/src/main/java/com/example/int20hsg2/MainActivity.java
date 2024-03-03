@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         spinnerManufacturer = findViewById(R.id.spinnerManufacturer);
         spinnerModel = findViewById(R.id.spinnerModel);
         btnNext = findViewById(R.id.btnNext);
-        btnSearch = findViewById(R.id.btnsearch);
+        btnSearch = findViewById(R.id.btnSearch);
 
         // Наповнюємо спіннери даними
         populateDeviceTypeSpinner();

@@ -5,27 +5,32 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NotSecure">
+    tools:context=".NotSecure"
+    android:background="@drawable/gradient_background">
 
     <TextView
         android:id="@+id/notSecureLabel"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Not Secure"
-        android:textSize="18sp"
+        android:text="@string/NotSuccess"
+        android:textSize="30sp"
         android:padding="8dp"
-        app:layout_constraintStart_toStartOf="@id/linkButton"
-        app:layout_constraintEnd_toEndOf="@id/btnBack"
+        android:gravity="center"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp" />
+        android:layout_marginTop="20dp" />
 
     <TextView
         android:id="@+id/deviceCharacteristicsLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Device Characteristics"
+        android:text="@string/characteristics"
         android:textSize="18sp"
+        android:textColor="@color/white"
         android:padding="8dp"
+        android:background="@color/white_purple"
         app:layout_constraintStart_toStartOf="@id/linkButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0"
@@ -39,8 +44,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="8dp"
-        android:text="Link"
+        android:text="@string/ReadMoreLink"
         android:textSize="18sp"
+        android:backgroundTint="@color/blue"
         app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintVertical_bias="0.8"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -52,8 +58,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="8dp"
-        android:text="Back"
+        android:text="@string/BtnBack"
         android:textSize="18sp"
+        android:backgroundTint="@color/blue"
         app:layout_constraintHorizontal_bias="0.8"
         app:layout_constraintVertical_bias="0.8"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -65,23 +72,25 @@
         android:id="@+id/listcharacteristics"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@id/linkButton"
+        android:background="@color/white_purple"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.3"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@id/btnBack">
+        app:layout_constraintStart_toStartOf="@id/deviceCharacteristicsLabel">
 
         <TableRow>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
+                android:textColor="@color/white"
                 android:text="Row 1, Column 1" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
+                android:textColor="@color/white"
                 android:text="Row 1, Column 2" />
         </TableRow>
 
@@ -90,10 +99,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Row 2, Column 1"
+                android:textColor="@color/white"
                 android:padding="8dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/white"
                 android:text="Row 2, Column 2"
                 android:padding="8dp"/>
         </TableRow>
@@ -102,11 +113,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Row 3, Column 1"
+                android:textColor="@color/white"
                 android:padding="8dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Row 3, Column 2"
+                android:textColor="@color/white"
                 android:padding="8dp"/>
         </TableRow>
         <TableRow>
@@ -114,11 +127,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Row 4, Column 1"
+                android:textColor="@color/white"
                 android:padding="8dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Row 4, Column 2"
+                android:textColor="@color/white"
                 android:padding="8dp"/>
         </TableRow>
         <TableRow>
@@ -126,11 +141,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Row 5, Column 1"
+                android:textColor="@color/white"
                 android:padding="8dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Row 5, Column 2"
+                android:textColor="@color/white"
                 android:padding="8dp"/>
         </TableRow>
         <TableRow>
@@ -138,11 +155,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Row 6, Column 1"
+                android:textColor="@color/white"
                 android:padding="8dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Row 6, Column 2"
+                android:textColor="@color/white"
                 android:padding="8dp"/>
         </TableRow>
         <TableRow>
@@ -150,11 +169,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Row 7, Column 1"
+                android:textColor="@color/white"
                 android:padding="8dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Row 7, Column 2"
+                android:textColor="@color/white"
                 android:padding="8dp"/>
         </TableRow>
 

@@ -19,7 +19,7 @@ public class device_is_not_found2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_device_is_not_found2);
 
-        ImageButton sendRequestButton = findViewById(R.id.sendRequestButton);
+        Button sendRequestButton = findViewById(R.id.sendRequestButton);
         sendRequestButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
