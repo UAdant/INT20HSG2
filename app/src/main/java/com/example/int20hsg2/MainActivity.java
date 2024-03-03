@@ -1,5 +1,4 @@
 package com.example.int20hsg2;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -9,9 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -55,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
                 // Перехід на екран DeviceIsNotFound2
                 Intent intent = new Intent(MainActivity.this, device_is_not_found2.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+
             }
         });
     }
