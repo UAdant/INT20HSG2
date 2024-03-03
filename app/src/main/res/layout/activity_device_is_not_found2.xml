@@ -47,7 +47,7 @@
         android:id="@+id/sendRequestButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/Sendrequest"
+        android:text="@string/Send"
         android:textColor="@color/white"
         app:layout_constraintVertical_bias="0.8"
         android:backgroundTint="@color/blue"
