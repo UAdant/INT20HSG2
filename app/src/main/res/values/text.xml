@@ -1,24 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <resources>
-    <string name="Good">Sucess: your device is secure</string>
+    <string name="Good">Success: your device is secure</string>
     <string name="NotSuccess">We are sorry, your device is not secure</string>
     <string name="characteristics">Device characteristics</string>
     <string name="NotFound">Unfortunately, we do not have enough information about the device</string>
     <string name="SelectDevice">Select device:</string>
     <string name="SelectModel">Select model:</string>
     <string name="SelectBrand">Select Brand:</string>
-    <string name="LoadScreen">Analyzing data...</string>
+    <string name="LoadScreen">Analyzing data…</string>
     <string name="Welcome">Welcome</string>
     <string name="ReadMoreLink">Read more link</string>
     <string name="BtnBack">Main menu</string>
     <string name="SendSuccess">Request successfully sent</string>
     <string name="Search">Search</string>
-    <string name="Sendrequest">Send a request to add a gadget</string>
-
-
-
-
-
-
+    <string name="Send">Send a request to add a gadget</string>
 </resources>
