@@ -25,25 +25,12 @@ public class MainActivity extends AppCompatActivity {
         spinnerDeviceType = findViewById(R.id.spinnerDeviceType);
         spinnerManufacturer = findViewById(R.id.spinnerManufacturer);
         spinnerModel = findViewById(R.id.spinnerModel);
-        btnNext = findViewById(R.id.btnNext);
         btnSearch = findViewById(R.id.btnSearch);
 
         // Наповнюємо спіннери даними
         populateDeviceTypeSpinner();
         populateManufacturerSpinner();
         populateModelSpinner();
-
-        // Обробка натискання на кнопку "Далі"
-        btnNext.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Показати загрузочний екран
-                showLoadingScreen();
-
-                // Симулюємо завантаження даних з бази даних
-                loadDataFromDatabase();
-            }
-        });
 
         // Обробка натискання на кнопку "Пошук"
         btnSearch.setOnClickListener(new View.OnClickListener() {
