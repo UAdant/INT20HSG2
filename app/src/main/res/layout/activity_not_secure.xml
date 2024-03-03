@@ -11,6 +11,7 @@
     <TextView
         android:id="@+id/notSecureLabel"
         android:layout_width="269dp"
+        android:fontFamily="@font/kokororegular"
         android:layout_height="166dp"
         android:layout_marginTop="16dp"
         android:gravity="start"
@@ -26,6 +27,7 @@
     <ImageButton
         android:layout_width="142dp"
         android:layout_height="131dp"
+        android:fontFamily="@font/kokororegular"
         android:background="@drawable/___"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -39,6 +41,7 @@
         android:id="@+id/deviceCharacteristicsLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/kokororegular"
         android:layout_marginStart="32dp"
         android:layout_marginBottom="116dp"
         android:background="@color/white_purple"
@@ -52,6 +55,7 @@
         android:id="@+id/linkButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/kokororegular"
         android:padding="8dp"
         android:text="@string/ReadMoreLink"
         android:textSize="18sp"
@@ -66,6 +70,7 @@
         android:id="@+id/btnBack2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/kokororegular"
         android:padding="8dp"
         android:text="@string/BtnBack"
         android:textSize="18sp"
@@ -80,6 +85,7 @@
     <TableLayout
         android:id="@+id/listcharacteristics"
         android:layout_width="wrap_content"
+        android:fontFamily="@font/kokororegular"
         android:gravity="center"
         android:layout_height="wrap_content"
         android:background="@color/white_purple"
@@ -94,11 +100,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
+                android:fontFamily="@font/kokororegular"
                 android:textColor="@color/white"
                 android:text="Row 1, Column 1" />
 
             <TextView
                 android:layout_width="wrap_content"
+                android:fontFamily="@font/kokororegular"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
                 android:textColor="@color/white"
@@ -108,12 +116,14 @@
         <TableRow>
             <TextView
                 android:layout_width="wrap_content"
+                android:fontFamily="@font/kokororegular"
                 android:layout_height="wrap_content"
                 android:text="Row 2, Column 1"
                 android:textColor="@color/white"
                 android:padding="8dp"/>
             <TextView
                 android:layout_width="wrap_content"
+                android:fontFamily="@font/kokororegular"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 android:text="Row 2, Column 2"
@@ -122,12 +132,14 @@
         <TableRow>
             <TextView
                 android:layout_width="wrap_content"
+                android:fontFamily="@font/kokororegular"
                 android:layout_height="wrap_content"
                 android:text="Row 3, Column 1"
                 android:textColor="@color/white"
                 android:padding="8dp"/>
             <TextView
                 android:layout_width="wrap_content"
+                android:fontFamily="@font/kokororegular"
                 android:layout_height="wrap_content"
                 android:text="Row 3, Column 2"
                 android:textColor="@color/white"
@@ -136,12 +148,14 @@
         <TableRow>
             <TextView
                 android:layout_width="wrap_content"
+                android:fontFamily="@font/kokororegular"
                 android:layout_height="wrap_content"
                 android:text="Row 4, Column 1"
                 android:textColor="@color/white"
                 android:padding="8dp"/>
             <TextView
                 android:layout_width="wrap_content"
+                android:fontFamily="@font/kokororegular"
                 android:layout_height="wrap_content"
                 android:text="Row 4, Column 2"
                 android:textColor="@color/white"
@@ -150,12 +164,14 @@
         <TableRow>
             <TextView
                 android:layout_width="wrap_content"
+                android:fontFamily="@font/kokororegular"
                 android:layout_height="wrap_content"
                 android:text="Row 5, Column 1"
                 android:textColor="@color/white"
                 android:padding="8dp"/>
             <TextView
                 android:layout_width="wrap_content"
+                android:fontFamily="@font/kokororegular"
                 android:layout_height="wrap_content"
                 android:text="Row 5, Column 2"
                 android:textColor="@color/white"
@@ -164,12 +180,14 @@
         <TableRow>
             <TextView
                 android:layout_width="wrap_content"
+                android:fontFamily="@font/kokororegular"
                 android:layout_height="wrap_content"
                 android:text="Row 6, Column 1"
                 android:textColor="@color/white"
                 android:padding="8dp"/>
             <TextView
                 android:layout_width="wrap_content"
+                android:fontFamily="@font/kokororegular"
                 android:layout_height="wrap_content"
                 android:text="Row 6, Column 2"
                 android:textColor="@color/white"
@@ -178,12 +196,14 @@
         <TableRow>
             <TextView
                 android:layout_width="wrap_content"
+                android:fontFamily="@font/kokororegular"
                 android:layout_height="wrap_content"
                 android:text="Row 7, Column 1"
                 android:textColor="@color/white"
                 android:padding="8dp"/>
             <TextView
                 android:layout_width="wrap_content"
+                android:fontFamily="@font/kokororegular"
                 android:layout_height="wrap_content"
                 android:text="Row 7, Column 2"
                 android:textColor="@color/white"

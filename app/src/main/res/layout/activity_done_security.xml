@@ -11,6 +11,7 @@
 
     <TextView
         android:id="@+id/notSecureLabel"
+        android:fontFamily="@font/kokororegular"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:text="@string/Good"
@@ -24,6 +25,7 @@
 
     <TextView
         android:id="@+id/deviceCharacteristicsLabel"
+        android:fontFamily="@font/kokororegular"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/characteristics"
@@ -41,6 +43,7 @@
 
     <Button
         android:id="@+id/btnBack3"
+        android:fontFamily="@font/kokororegular"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="8dp"
@@ -56,6 +59,7 @@
 
     <ImageButton
         android:layout_width="wrap_content"
+        android:fontFamily="@font/kokororegular"
         android:layout_height="wrap_content"
         android:layout_marginEnd="15dp"
         android:background="@drawable/done_"
@@ -65,6 +69,7 @@
 
     <TableLayout
         android:id="@+id/listcharacteristics"
+        android:fontFamily="@font/kokororegular"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@color/white_purple"
@@ -76,6 +81,7 @@
         <TableRow>
             <TextView
                 android:layout_width="wrap_content"
+                android:fontFamily="@font/kokororegular"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
                 android:textColor="@color/white"
@@ -83,6 +89,7 @@
 
             <TextView
                 android:layout_width="wrap_content"
+                android:fontFamily="@font/kokororegular"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
                 android:textColor="@color/white"
@@ -92,12 +99,14 @@
         <TableRow>
             <TextView
                 android:layout_width="wrap_content"
+                android:fontFamily="@font/kokororegular"
                 android:layout_height="wrap_content"
                 android:text="Row 2, Column 1"
                 android:textColor="@color/white"
                 android:padding="8dp"/>
             <TextView
                 android:layout_width="wrap_content"
+                android:fontFamily="@font/kokororegular"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 android:text="Row 2, Column 2"
@@ -106,12 +115,14 @@
         <TableRow>
             <TextView
                 android:layout_width="wrap_content"
+                android:fontFamily="@font/kokororegular"
                 android:layout_height="wrap_content"
                 android:text="Row 3, Column 1"
                 android:textColor="@color/white"
                 android:padding="8dp"/>
             <TextView
                 android:layout_width="wrap_content"
+                android:fontFamily="@font/kokororegular"
                 android:layout_height="wrap_content"
                 android:text="Row 3, Column 2"
                 android:textColor="@color/white"
@@ -120,12 +131,14 @@
         <TableRow>
             <TextView
                 android:layout_width="wrap_content"
+                android:fontFamily="@font/kokororegular"
                 android:layout_height="wrap_content"
                 android:text="Row 4, Column 1"
                 android:textColor="@color/white"
                 android:padding="8dp"/>
             <TextView
                 android:layout_width="wrap_content"
+                android:fontFamily="@font/kokororegular"
                 android:layout_height="wrap_content"
                 android:text="Row 4, Column 2"
                 android:textColor="@color/white"
@@ -134,12 +147,14 @@
         <TableRow>
             <TextView
                 android:layout_width="wrap_content"
+                android:fontFamily="@font/kokororegular"
                 android:layout_height="wrap_content"
                 android:text="Row 5, Column 1"
                 android:textColor="@color/white"
                 android:padding="8dp"/>
             <TextView
                 android:layout_width="wrap_content"
+                android:fontFamily="@font/kokororegular"
                 android:layout_height="wrap_content"
                 android:text="Row 5, Column 2"
                 android:textColor="@color/white"
@@ -149,12 +164,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/kokororegular"
                 android:text="Row 6, Column 1"
                 android:textColor="@color/white"
                 android:padding="8dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/kokororegular"
                 android:text="Row 6, Column 2"
                 android:textColor="@color/white"
                 android:padding="8dp"/>
@@ -162,12 +179,14 @@
         <TableRow>
             <TextView
                 android:layout_width="wrap_content"
+                android:fontFamily="@font/kokororegular"
                 android:layout_height="wrap_content"
                 android:text="Row 7, Column 1"
                 android:textColor="@color/white"
                 android:padding="8dp"/>
             <TextView
                 android:layout_width="wrap_content"
+                android:fontFamily="@font/kokororegular"
                 android:layout_height="wrap_content"
                 android:text="Row 7, Column 2"
                 android:textColor="@color/white"

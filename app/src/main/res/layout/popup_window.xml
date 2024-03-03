@@ -18,6 +18,7 @@
         android:background="@drawable/purple_oval"
         android:backgroundTint="@color/blue"
         android:gravity="center"
+        android:fontFamily="@font/kokororegular"
         android:text="@string/Send"
         android:textColor="@android:color/white"
         android:textSize="30sp"
@@ -28,6 +29,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:fontFamily="@font/kokororegular"
         android:backgroundTint="@color/blue"
         android:text="@string/BtnBack"
         android:textSize="20sp" />
