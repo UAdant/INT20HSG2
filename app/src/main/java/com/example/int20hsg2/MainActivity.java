@@ -1,14 +1,11 @@
 package com.example.int20hsg2;
 
-import android.content.Intent;
+import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.os.Handler;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -17,105 +14,99 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Spinner spinnerDeviceType, spinnerManufacturer, spinnerModel;
-    private Button btnNext, btnSearch;
+    private Spinner typeSpinner, brandSpinner, modelSpinner;
+    private List<String> deviceTypes, deviceBrands, deviceModels;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        spinnerDeviceType = findViewById(R.id.spinnerDeviceType);
-        spinnerManufacturer = findViewById(R.id.spinnerManufacturer);
-        spinnerModel = findViewById(R.id.spinnerModel);
-        btnNext = findViewById(R.id.btnNext);
-        btnSearch = findViewById(R.id.btnsearch);
+        typeSpinner = findViewById(R.id.type_spinner);
+        brandSpinner = findViewById(R.id.brand_spinner);
+        modelSpinner = findViewById(R.id.model_spinner);
 
-        // Наповнюємо спіннери даними
-        populateDeviceTypeSpinner();
-        populateManufacturerSpinner();
-        populateModelSpinner();
+        deviceTypes = new ArrayList<>();
+        deviceBrands = new ArrayList<>();
+         deviceModels = new ArrayList<>();
 
-        // Обробка натискання на кнопку "Далі"
-        btnNext.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Показати загрузочний екран
-                showLoadingScreen();
+        // Додавання даних до бази даних
+        addDataToDatabase();
 
-                // Симулюємо завантаження даних з бази даних
-                loadDataFromDatabase();
-            }
-        });
+        // Отримання даних з бази даних
+        retrieveDeviceDataFromDatabase();
 
-        // Обробка натискання на кнопку "Пошук"
-        btnSearch.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Перехід на екран DeviceIsNotFound2
-                Intent intent = new Intent(MainActivity.this, device_is_not_found2.class);
-                startActivity(intent);
-            }
-        });
+        // Створення адаптерів для випадаючих списків
+        ArrayAdapter<String> typeAdapter = new ArrayAdapter<>(this,
+                android.R.layout.simple_spinner_item, deviceTypes);
+        typeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        typeSpinner.setAdapter(typeAdapter);
+
+        ArrayAdapter<String> brandAdapter = new ArrayAdapter<>(this,
+                android.R.layout.simple_spinner_item, deviceBrands);
+        brandAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        brandSpinner.setAdapter(brandAdapter);
+
+        ArrayAdapter<String> modelAdapter = new ArrayAdapter<>(this,
+                android.R.layout.simple_spinner_item, deviceModels);
+        modelAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        modelSpinner.setAdapter(modelAdapter);
     }
 
-    private void populateDeviceTypeSpinner() {
-        // Додаємо дані для спіннера типу пристрою
-        List<String> deviceTypes = new ArrayList<>();
-        deviceTypes.add("Смартфон");
-        deviceTypes.add("Планшет");
-        deviceTypes.add("Ноутбук");
-        // Додаємо адаптер до спіннера
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, deviceTypes);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerDeviceType.setAdapter(adapter);
+    private void addDataToDatabase() {
+        SQLiteDatabase db = DeviceDatabaseHelper.getInstance(this).getWritableDatabase();
+
+        // Дані для вставки
+        String[][] data = {
+                {"1", "babymonitor", "BOTSLAB", "Camc221", "TRUE", "TRUE", "TRUE", "TRUE", "WEP", "TRUE", "N/A", "YES", "https://global.botslab.com/products/botslab-indoor-cam-2-pro", "No reported issues"},
+                {"2", "babymonitor", "‎Owlet", "Cam 1", "TRUE", "TRUE", "TRUE", "FALSE", "TLS", "FALSE", "AES_128bit", "NO", "https://owletcare.com/products/cam", "Lots of articles about camera being hacked e.g. https://www.reddit.com/r/beyondthebump/comments/13ln4n6/mans_voice_over_owlet_camera/"},
+                {"3", "babymonitor", "VTech", "DM111", "FALSE", "FALSE", "FALSE", "FALSE", "N/A", "N/A", "N/A", "N/A", "https://www.amazon.com/VTech-Rechargeable-Guaranteed-Transmissions-Cystal-Clear/dp/B00JEV5UI8?th=1", "Not enough information"}
+        };
+
+        // SQL-запит для вставки даних
+        String insertQuery = "INSERT INTO devices (ID, Device_type, Device_brand, Device_model, Video, WiFi, twoGHz, fiveGHz, Security_Protocol, Privacy_Shutter, Encryption, Device_is_secure, Device_info_link, Comments) " +
+                "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        // Виконати запит для кожного рядка даних
+        for (String[] row : data) {
+            db.execSQL(insertQuery, row);
+        }
+
+        db.close();
     }
 
-    private void populateManufacturerSpinner() {
-        // Додаємо дані для спіннера виробника
-        List<String> manufacturers = new ArrayList<>();
-        manufacturers.add("Samsung");
-        manufacturers.add("Apple");
-        manufacturers.add("HP");
-        // Додаємо адаптер до спіннера
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, manufacturers);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerManufacturer.setAdapter(adapter);
-    }
+    private void retrieveDeviceDataFromDatabase() {
+        // Отримання посилання на базу даних
+        SQLiteDatabase db = DeviceDatabaseHelper.getInstance(this).getReadableDatabase();
 
-    private void populateModelSpinner() {
-        // Додаємо дані для спіннера моделі
-        List<String> models = new ArrayList<>();
-        models.add("Galaxy S20");
-        models.add("iPhone 12");
-        models.add("Pavilion x360");
-        // Додаємо адаптер до спіннера
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, models);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerModel.setAdapter(adapter);
-    }
+        // Виконання запиту для отримання всіх рядків з таблиці devices
+        Cursor cursor = db.query("devices", null, null, null, null, null, null);
 
-    private void showLoadingScreen() {
-        // Показати загрузочний екран
-        setContentView(R.layout.loading_screen);
-    }
+        // Індекси стовпців
+        int typeIndex = cursor.getColumnIndex("Device_type");
+        int brandIndex = cursor.getColumnIndex("Device_brand");
+        int modelIndex = cursor.getColumnIndex("Device_model");
 
-    private void loadDataFromDatabase() {
-        // Симулюємо завантаження даних з бази даних
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                // Здійснення звернення до бази даних
-                // Після завершення завантаження даних, переходимо на наступний екран
-                navigateToNextScreen();
-            }
-        }, 3000); // Затримка на 3 секунди для симуляції завантаження даних
-    }
+        // Додавання унікальних значень до списків
+        if (cursor.moveToFirst()) {
+            do {
+                String type = cursor.getString(typeIndex);
+                String brand = cursor.getString(brandIndex);
+                String model = cursor.getString(modelIndex);
 
-    private void navigateToNextScreen() {
-        // Перехід на наступний екран після завантаження даних
-        Intent intent = new Intent(MainActivity.this, NextActivity.class);
-        startActivity(intent);
-        finish(); // Закриваємо поточну активність, щоб користувач не міг повернутися назад
+                if (!deviceTypes.contains(type)) {
+                    deviceTypes.add(type);
+                }
+                if (!deviceBrands.contains(brand)) {
+                    deviceBrands.add(brand);
+                }
+                if (!deviceModels.contains(model)) {
+                    deviceModels.add(model);
+                }
+            } while (cursor.moveToNext());
+        }
+
+        // Закриття курсора і бази даних
+        cursor.close();
+        db.close();
     }
 }

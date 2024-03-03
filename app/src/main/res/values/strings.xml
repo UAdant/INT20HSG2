@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">INT20HSG2</string>
+    <string-array name="device_types">
+        <item>Смартфон</item>
+        <item>Планшет</item>
+        <item>Ноутбук</item>
+    </string-array>
+
+    <string-array name="device_brands">
+        <item>Samsung</item>
+        <item>Apple</item>
+        <item>HP</item>
+        <!-- Додайте інші бренди, які вам потрібно -->
+    </string-array>
+
+    <string-array name="device_models">
+        <item>Galaxy S20</item>
+        <item>iPhone 12</item>
+        <item>Pavilion x360</item>
+        <!-- Додайте інші моделі, які вам потрібно -->
+    </string-array>
 </resources>

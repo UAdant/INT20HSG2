@@ -42,7 +42,7 @@ public class device_is_not_found2 extends AppCompatActivity {
         );
 
         // Оголошуємо кнопку "Повернутися на головну"
-        Button backToMainButton = popupView.findViewById(R.id.backToMainButton);
+        ImageButton backToMainButton = popupView.findViewById(R.id.backToMainButton);
         backToMainButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
