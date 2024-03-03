@@ -15,4 +15,7 @@
     <string name="SendSuccess">Request successfully sent</string>
     <string name="Search">Search</string>
     <string name="Send">Send a request to add a gadget</string>
+    <string name="Info">More info</string>
+    <string name="NameProg">CyberCheck</string>
+
 </resources>

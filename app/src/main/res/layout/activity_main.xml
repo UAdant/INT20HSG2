@@ -7,19 +7,40 @@
     tools:context=".MainActivity"
     android:background="@drawable/gradient_background">
 
+
     <!-- Вибір типу пристрою -->
+
+    <TextView
+        android:id="@+id/NameProgram"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="13dp"
+        android:layout_marginEnd="19dp"
+        android:gravity="center"
+        android:text="@string/NameProg"
+        android:textColor="@color/black"
+        android:textSize="30sp" />
+
     <TextView
         android:id="@+id/textViewDeviceType"
         android:layout_width="wrap_content"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
         android:layout_height="wrap_content"
         android:text="@string/SelectDevice"
         android:textColor="@color/white"
-        android:textSize="18sp" />
+        android:textSize="23sp" />
 
     <Spinner
         android:id="@+id/spinnerDeviceType"
-        android:layout_width="393dp"
-        android:layout_height="61dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
         android:layout_below="@id/textViewDeviceType"
         android:layout_marginTop="8dp" />
 
@@ -29,16 +50,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/spinnerDeviceType"
+        android:gravity="center"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
         android:layout_marginTop="16dp"
         android:textColor="@color/white"
         android:text="@string/SelectBrand"
-        android:textSize="18sp" />
+        android:textSize="23sp" />
 
     <Spinner
         android:id="@+id/spinnerManufacturer"
-        android:layout_width="387dp"
-        android:layout_height="55dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@id/textViewManufacturer"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
         android:layout_marginTop="8dp" />
 
     <!-- Вибір моделі -->
@@ -47,16 +73,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/spinnerManufacturer"
+        android:gravity="center"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
         android:layout_marginTop="16dp"
         android:textColor="@color/white"
         android:text="@string/SelectModel"
-        android:textSize="18sp" />
+        android:textSize="23sp" />
 
     <Spinner
         android:id="@+id/spinnerModel"
-        android:layout_width="389dp"
-        android:layout_height="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@id/textViewModel"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
         android:layout_marginTop="8dp" />
 
     <!-- Кнопка для переходу на інший екран -->
@@ -77,4 +108,15 @@
         android:layout_marginEnd="176dp"
         android:layout_marginBottom="198dp"
         android:text="@string/Search" />
+
+
+
+    <Button
+        android:id="@+id/information"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/NameProgram"
+        android:layout_alignParentEnd="true"
+        android:text="@string/Info" />
+
 </RelativeLayout>
